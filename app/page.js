@@ -50,10 +50,22 @@ export default function Home() {
           Github →
         </a>
       </nav>
-      <main className="h-[90vh] w-full flex items-center justify-between  font-[family-name:var(--font-geist-sans)]">
+      <main className="h-[90vh] w-full flex items-center justify-between font-[family-name:var(--font-geist-sans)] ">
         <div className="w-1/2">
-        <h1 className="text-6xl">Hello!</h1>
-        <h1 className="text-3xl">My name is Paula Garcia, and I'm a frontend developer</h1>
+          <h1 className="text-6xl my-2">Hello!</h1>
+          <h2 className="text-3xl leading-11 my-6">
+            My name is <span className="font-bold">Paula Garcia</span>, and I'm
+            a Frontend Developer
+          </h2>
+          <h3 className="text-xl my-2">
+            Get in touch! →{" "}
+            <a
+              href="mailto:pauligarcia_05@hotmail.com"
+              className="underline underline-offset-6 decoration-purple-600 decoration-3"
+            >
+              pauligarcia_05@hotmail.com
+            </a>
+          </h3>
         </div>
         <p className="w-1/2"></p>
       </main>
