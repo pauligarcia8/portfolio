@@ -1,76 +1,15 @@
 "use client";
-import { useState, useEffect } from "react";
 import Image from "next/image";
-import { FaArrowUp } from "react-icons/fa";
+import ArrowUp from "@/components/ArrowUp";
 
 export default function Home() {
-   const [show, setShow] = useState(false);
-
-   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setShow(true);
-      } else {
-        setShow(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  //if (!show) return null; esconde toda la pagina porque el componente de la flecha esta dentro de la pagina principal, excluirla
+   
 
   return (
     <div className="mx-auto max-w-screen-xl px-6 py-12 md:px-12 md:py-16 lg:py-0 items-center justify-items-center min-h-screen p-5 font-[family-name:var(--font-geist-mono)]">
-      <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50 flex gap-[24px] py-4 px-6 justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="/#about-me"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          About Me
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href=""
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Projects
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://github.com/pauligarcia8"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Github →
-        </a>
-      </nav>
       <main id="main" className="h-screen w-full flex flex-col items-start justify-center font-[family-name:var(--font-geist-sans)] ">
         <section className="w-1/2">
-          <h1 className="text-6xl my-2">Hello!</h1>
+          <h1 className="text-6xl my-2">Hello! 👋​</h1>
           <h2 className="text-3xl leading-11 my-6">
             My name is <span className="font-bold">Paula Garcia</span>, and I&apos;m
             a Frontend Developer
@@ -118,10 +57,7 @@ export default function Home() {
           confidence.
         </p>
       </section>
-      <a href="/#main" aria-label="Scroll to top" className="fixed bottom-4 right-4 z-[9999] text-black p-3 rounded-full shadow-lg hover:bg-purple-500 hover:text-white transition cursor-pointer animate-bounce">
-        <FaArrowUp  />
-
-      </a>
+      <ArrowUp />
     </div>
   );
 }
