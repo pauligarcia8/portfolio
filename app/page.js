@@ -1,6 +1,6 @@
 "use client";
-import Gallery from "@/components/Gallery";
 import ArrowUp from "@/components/ArrowUp";
+import GalleryCarousel from "@/components/GalleryCarousel";
 
 export default function Home() {
   return (
@@ -61,8 +61,11 @@ export default function Home() {
           confidence.
         </p>
       </section>
-      <section id="projects" className="w-full flex flex-col items-center justify-center gap-14">
-        <Gallery />
+      <section
+        id="projects"
+        className="h-screen w-full flex flex-col items-center justify-center gap-14"
+      >
+        <GalleryCarousel />
       </section>
       <ArrowUp />
     </div>
