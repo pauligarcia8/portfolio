@@ -1,18 +1,19 @@
 "use client";
-import Image from "next/image";
 import ArrowUp from "@/components/ArrowUp";
+import GalleryCarousel from "@/components/GalleryCarousel";
 
 export default function Home() {
-   
-
   return (
     <div className="mx-auto max-w-screen-xl px-6 py-12 md:px-12 md:py-16 lg:py-0 items-center justify-items-center min-h-screen p-5 font-[family-name:var(--font-geist-mono)]">
-      <main id="main" className="h-screen w-full flex flex-col items-start justify-center font-[family-name:var(--font-geist-sans)] ">
+      <main
+        id="main"
+        className="h-screen w-full flex flex-col items-start justify-center font-[family-name:var(--font-geist-sans)] "
+      >
         <section className="w-1/2">
           <h1 className="text-6xl my-2">Hello! 👋​</h1>
           <h2 className="text-3xl leading-11 my-6">
-            My name is <span className="font-bold">Paula Garcia</span>, and I&apos;m
-            a Frontend Developer
+            My name is <span className="font-bold">Paula Garcia</span>, and
+            I&apos;m a Frontend Developer
           </h2>
           <h3 className="text-xl my-2">
             Get in touch! →{" "}
@@ -25,7 +26,10 @@ export default function Home() {
           </h3>
         </section>
       </main>
-      <section id="about-me" className="h-screen w-full flex flex-col items-center justify-center">
+      <section
+        id="about-me"
+        className="h-screen w-full flex flex-col items-center justify-center"
+      >
         <p>
           My journey began with a passion for music, dreaming of becoming an
           orchestral composer and clarinetist. However, life took me down a
@@ -43,8 +47,8 @@ export default function Home() {
           I began my web development career learning HTML, CSS, and JavaScript,
           which allowed me to build dynamic and attractive interfaces. Later, I
           deepened my knowledge in React, a powerful JavaScript library that has
-          enabled me to create more efficient and scalable web applications.
-          I have used various styling libraries like Bootstrap, Material UI,
+          enabled me to create more efficient and scalable web applications. I
+          have used various styling libraries like Bootstrap, Material UI,
           Tailwind, and Storybook to preview components and have been involved
           in the project lifecycle through agile methodologies. I am proactive,
           patient, and adaptable, always focused on achieving excellent results.
@@ -56,6 +60,12 @@ export default function Home() {
           continue growing professionally and face new challenges with
           confidence.
         </p>
+      </section>
+      <section
+        id="projects"
+        className="h-screen w-full flex flex-col items-center justify-center gap-14"
+      >
+        <GalleryCarousel />
       </section>
       <ArrowUp />
     </div>
